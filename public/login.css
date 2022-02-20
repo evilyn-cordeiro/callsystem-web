@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body{
   margin: 0;
   background-color: #121212;
   display: flex;
   align-items: center;
   justify-content: center;
+  font: 14px 'Roboto', sans-serif;
 }
 
 .Container{
@@ -41,7 +44,7 @@ body{
 
 .BoxLogin{
   width: 360px;
-  height: 190px;
+  height: 170px;
   display: flex;
   flex-direction: column;
 
@@ -89,7 +92,6 @@ body{
 
 .BoxFooter a{
   color: #000;
-  margin-top: 5px;
+  margin-top: 10px;
   cursor: pointer;
-
 }
