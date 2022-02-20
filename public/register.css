@@ -24,7 +24,13 @@ body{
   align-items: center;
   flex-direction: column;
   background-color: #EAEAEA;
+}
 
+.Title{
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 15px;
+  color:#181c2e;
 }
 
 .BoxIcon{
