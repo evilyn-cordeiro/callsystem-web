@@ -6,6 +6,7 @@ import {
 // pages
 import {
   Dashboard, Profile, Settings,
+  Called,
 } from '..';
 // components
 import { NavBar } from '../../components';
@@ -15,18 +16,18 @@ import {
 } from './style';
 
 export default function Main() {
+  const history = useHistory();
+  // set the page url.
   /**
    * inspect the page title and join
    * with the value assigned to the function.
    */
   function handleTitleDom(value) {
     reactDom.render(
-      `Call System - ${value}`,
+      `Called System - ${value}`,
       document.getElementById('title'),
     );
   }
-  const history = useHistory();
-  // set the page url.
   const [location, setLocation] = useState('');
   /**
    *  useEffect which maintains state
@@ -35,7 +36,7 @@ export default function Main() {
   useEffect(() => {
     switch (history.location.pathname) {
       case '/profile':
-        setLocation('profile');
+        setLocation('/profile');
         /**
          * value assigned to the function
          * to identify the page by name.
@@ -43,8 +44,12 @@ export default function Main() {
         handleTitleDom('Cliente');
         break;
       case '/settings':
-        setLocation('settings');
+        setLocation('/settings');
         handleTitleDom('Configurações');
+        break;
+      case '/called':
+        setLocation('/called');
+        handleTitleDom('Cadastro');
         break;
       default:
         setLocation('');
@@ -85,6 +90,11 @@ export default function Main() {
             exact
             path="/settings"
             component={Settings}
+          />
+          <Route
+            exact
+            path="/called"
+            component={Called}
           />
         </Switch>
       </Content>

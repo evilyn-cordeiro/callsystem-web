@@ -1,6 +1,6 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 // components
-import { IconButton } from '../../components';
 
 export const Container = styled.div`
   width: 100%;
@@ -36,19 +36,23 @@ export const SpanStyle = styled.span`
   border-radius: 5px;
 `;
 
-export const IconBtnStyle = styled(IconButton)`
-  width: 120px;
-  height: 40px;
+export const LinkStyled = styled(Link)`
+  width: 150px;
+  float:right;
+  margin-bottom: 1.5em;
   background-color: #83bf02;
   color: #FFF;
+  border:0;
+  padding: .5em;
   display: flex;
-  justify-content: center;
+  justify-content:space-between;
   align-items: center;
-  font-weight: 300;
-  font-size: 15px;
+  font-weight: 600;
+  font-size: 1.1em;
+  text-decoration: none;
   border-radius: 6px;
   transition: ease-in 0.2s;
-  margin-top: 10px;
+  margin-top: 15px;
 
   :hover{
     background-color: #5fd204;
