@@ -7,25 +7,12 @@ import { Container, BoxTopStyled, BoxEndStyled } from './style';
 export default function NavBar({
   // click event
   onClick,
-  /**
-  * Change the screen according
-  * to the 'onClick' event
-  */
-  defaultScreen = 'Início',
 }) {
-  // UseState constant created to style the button.
-  const [screen, setScreen] = useState(defaultScreen);
-  // hook to change defaultScreen state.
-  useEffect(() => {
-    setScreen(defaultScreen);
-  }, [defaultScreen]);
-
   /**
   * assigns a functionality to the button
   * to switch screens by assigning the "name".
   */
   function handleButtonClick(name) {
-    setScreen(name);
     if (onClick) onClick(name);
   }
 
@@ -43,7 +30,6 @@ export default function NavBar({
           )}
           label="Início"
           onClick={() => handleButtonClick('')}
-          isActive={screen === ''}
 
         />
         <IconButton
@@ -54,8 +40,7 @@ export default function NavBar({
 
           )}
           label="Cliente"
-          onClick={() => handleButtonClick('profile')}
-          isActive={screen === '/profile'}
+          onClick={() => handleButtonClick('client')}
         />
         <IconButton
           icon={(
@@ -65,7 +50,6 @@ export default function NavBar({
           )}
           label="Configurações"
           onClick={() => handleButtonClick('settings')}
-          isActive={screen === '/settings'}
         />
       </BoxEndStyled>
     </Container>

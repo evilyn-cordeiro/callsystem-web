@@ -1,11 +1,13 @@
 import Dashboard from './Dashboard';
-import Profile from './Profile';
+import Client from './Client';
 import Settings from './Settings';
+import NewClient from './NewClient';
 import Called from './Called';
 
 export {
   Dashboard,
-  Profile,
+  Client,
   Settings,
+  NewClient,
   Called,
 };

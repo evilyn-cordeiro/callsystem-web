@@ -5,8 +5,8 @@ import {
 } from 'react-router-dom';
 // pages
 import {
-  Dashboard, Profile, Settings,
-  Called,
+  Dashboard, Settings,
+  NewClient, Called, Client,
 } from '..';
 // components
 import { NavBar } from '../../components';
@@ -35,8 +35,8 @@ export default function Main() {
    */
   useEffect(() => {
     switch (history.location.pathname) {
-      case '/profile':
-        setLocation('/profile');
+      case '/client':
+        setLocation('/client');
         /**
          * value assigned to the function
          * to identify the page by name.
@@ -47,9 +47,9 @@ export default function Main() {
         setLocation('/settings');
         handleTitleDom('Configurações');
         break;
-      case '/called':
-        setLocation('/called');
-        handleTitleDom('Cadastro');
+      case '/newclient':
+        setLocation('/newclient');
+        handleTitleDom('Adicionar Cliente');
         break;
       default:
         setLocation('');
@@ -83,13 +83,18 @@ export default function Main() {
           />
           <Route
             exact
-            path="/profile"
-            component={Profile}
+            path="/client"
+            component={Client}
           />
           <Route
             exact
             path="/settings"
             component={Settings}
+          />
+          <Route
+            exact
+            path="/newclient"
+            component={NewClient}
           />
           <Route
             exact

@@ -10,19 +10,7 @@ import {
 export default function Dashboard({
   // click event
   onClick,
-  /**
-  * Change the screen according
-  * to the 'onClick' event
-  */
-  defaultScreen,
 }) {
-  /**
-    * assigns a functionality to the button
-    * to switch screens by assigning the "name".
-    */
-  function handleButtonClickDashboard(name) {
-    if (onClick) onClick(name);
-  }
   return (
     <Container>
       <HeaderStyle>
