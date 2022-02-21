@@ -9,7 +9,7 @@ import { Dashboard, Profile, Calls } from '..';
 import { TabNavigator } from '../../components';
 // style
 import {
-  Container, Content, Aside, CentralContent,
+  Container, Content, Aside,
 } from './style';
 
 export default function Main() {

@@ -13,13 +13,13 @@ export const BoxTopStyled = styled.div`
   width: 100%;
   height: 200px;
   background-color: red;
-  
 `;
 
 export const BoxEndStyled = styled.div`
   width: 100%;
-  height: 400px;
+  height: 190px;
   display: flex;
-  align-items: center;
-  background-color: aqua;
+  justify-content: space-between;
+  margin-top: 50px;
+  flex-direction: column;
 `;

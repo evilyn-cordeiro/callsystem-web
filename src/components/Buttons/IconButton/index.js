@@ -1,6 +1,8 @@
 import React from 'react';
 // style
-import { Container, IconStyle, LabelStyle } from './style';
+import {
+  Container, IconStyle, LabelStyle, BoxCenterStyle,
+} from './style';
 
 export default function IconButton({
   // click event
@@ -13,8 +15,11 @@ export default function IconButton({
 }) {
   return (
     <Container onClick={onClick} {...props}>
-      <IconStyle>{icon}</IconStyle>
-      <LabelStyle>{label}</LabelStyle>
+      <BoxCenterStyle>
+        <IconStyle>{icon}</IconStyle>
+        <LabelStyle>{label}</LabelStyle>
+      </BoxCenterStyle>
+
     </Container>
   );
 }
