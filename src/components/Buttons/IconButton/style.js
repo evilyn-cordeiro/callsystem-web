@@ -31,7 +31,7 @@ export const IconStyle = styled.div`
 `;
 
 export const LabelStyle = styled.div`
-  width: 140px;
+  width: 250px;
   height: 39px;
   display: flex;
   align-items: center;

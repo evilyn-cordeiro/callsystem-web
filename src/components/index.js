@@ -1,8 +1,8 @@
-import TabNavigator from './TabNavigator';
+import NavBar from './NavBar';
 import Title from './Title';
 
 export {
-  TabNavigator,
+  NavBar,
   Title,
 };
 

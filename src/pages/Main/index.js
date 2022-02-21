@@ -8,7 +8,7 @@ import {
   Dashboard, Profile, Settings,
 } from '..';
 // components
-import { TabNavigator } from '../../components';
+import { NavBar } from '../../components';
 // style
 import {
   Container, Content, Aside,
@@ -63,7 +63,7 @@ export default function Main() {
   return (
     <Container>
       <Aside>
-        <TabNavigator
+        <NavBar
           onClick={(name) => handleRegisterPress(name)}
           defaultScreen={location}
         />

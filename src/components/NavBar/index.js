@@ -4,14 +4,13 @@ import { IconButton } from '../Buttons';
 // style
 import { Container, BoxTopStyled, BoxEndStyled } from './style';
 
-export default function TabNavigator({
+export default function NavBar({
   // click event
   onClick,
   /**
   * Change the screen according
   * to the 'onClick' event
   */
-
   defaultScreen = 'Início',
 }) {
   // UseState constant created to style the button.
@@ -33,7 +32,7 @@ export default function TabNavigator({
   return (
     <Container>
       <BoxTopStyled>
-        text
+        texts
       </BoxTopStyled>
       <BoxEndStyled>
         <IconButton
