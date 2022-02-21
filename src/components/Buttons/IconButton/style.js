@@ -2,23 +2,22 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  height: 50px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: ease-in-out 0.4s;
 
   :hover{
-    background-color: aqua;
+    background-color: #121212;
   }
 `;
 
 export const BoxCenterStyle = styled.div`
-    width: 300px;
+    width: 100%;
     height: 50px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 `;
 

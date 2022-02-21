@@ -4,7 +4,9 @@ import {
   Switch, Route, useHistory, Redirect,
 } from 'react-router-dom';
 // pages
-import { Dashboard, Profile, Calls } from '..';
+import {
+  Dashboard, Profile, Calls, Settings,
+} from '..';
 // components
 import { TabNavigator } from '../../components';
 // style
@@ -38,11 +40,15 @@ export default function Main() {
          * value assigned to the function
          * to identify the page by name.
          */
-        handleTitleDom('Profile');
+        handleTitleDom('Cliente');
         break;
       case '/calls':
         setLocation('resultado');
-        handleTitleDom('Resultado');
+        handleTitleDom('Chamados');
+        break;
+      case '/settings':
+        setLocation('settings');
+        handleTitleDom('Configurações');
         break;
       default:
         setLocation('');
@@ -60,10 +66,11 @@ export default function Main() {
 
   return (
     <Container>
-      <Aside> <TabNavigator
-        onClick={(name) => handleRegisterPress(name)}
-        defaultScreen={location}
-      />
+      <Aside>
+        <TabNavigator
+          onClick={(name) => handleRegisterPress(name)}
+          defaultScreen={location}
+        />
       </Aside>
       <Content>
         <Switch>
@@ -82,6 +89,11 @@ export default function Main() {
             exact
             path="/profile"
             component={Profile}
+          />
+          <Route
+            exact
+            path="/settings"
+            component={Settings}
           />
         </Switch>
       </Content>

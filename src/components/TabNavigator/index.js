@@ -1,11 +1,35 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 // components
 import { IconButton } from '../Buttons';
 // style
 import { Container, BoxTopStyled, BoxEndStyled } from './style';
 
-const newLocal = 'AiOutlineHome';
-export default function TabNavigator() {
+export default function TabNavigator({
+  // click event
+  onClick,
+  /**
+  * Change the screen according
+  * to the 'onClick' event
+  */
+
+  defaultScreen = 'Início',
+}) {
+  // UseState constant created to style the button.
+  const [screen, setScreen] = useState(defaultScreen);
+  // hook to change defaultScreen state.
+  useEffect(() => {
+    setScreen(defaultScreen);
+  }, [defaultScreen]);
+
+  /**
+  * assigns a functionality to the button
+  * to switch screens by assigning the "name".
+  */
+  function handleButtonClick(name) {
+    setScreen(name);
+    if (onClick) onClick(name);
+  }
+
   return (
     <Container>
       <BoxTopStyled>
@@ -19,6 +43,9 @@ export default function TabNavigator() {
             </svg>
           )}
           label="Chamados"
+          onClick={() => handleButtonClick('calls')}
+          isActive={screen === ''}
+
         />
         <IconButton
           icon={(
@@ -28,6 +55,8 @@ export default function TabNavigator() {
 
           )}
           label="Cliente"
+          onClick={() => handleButtonClick('profile')}
+          isActive={screen === '/profile'}
         />
         <IconButton
           icon={(
@@ -36,6 +65,8 @@ export default function TabNavigator() {
             </svg>
           )}
           label="Configurações"
+          onClick={() => handleButtonClick('settings')}
+          isActive={screen === '/settings'}
         />
       </BoxEndStyled>
     </Container>
