@@ -1,12 +1,15 @@
 import React from 'react';
-import Radio from '../../components/Inputs/Radio';
 // style
 import { Container } from './style';
 
-export default function Called() {
+export default function Radio({
+  label,
+}) {
   return (
     <Container>
-      <Radio />
+      <Radio>
+        texto
+      </Radio>
     </Container>
   );
 }
