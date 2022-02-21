@@ -8,6 +8,9 @@ export default function TabNavigator() {
       <BoxTopStyled>
         text
       </BoxTopStyled>
+      <BoxEndStyled>
+        buttons
+      </BoxEndStyled>
     </Container>
   );
 }

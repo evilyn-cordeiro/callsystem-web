@@ -10,10 +10,6 @@ export const Aside = styled.div`
   background: #fff;
 `;
 
-export const CentralContent = styled.div`
-  width: 100%;
-`;
-
 export const Content = styled.div`
   width: 100%;
   display: flex;

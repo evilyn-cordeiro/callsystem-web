@@ -4,21 +4,22 @@ export const Container = styled.div`
   width: 300px;
   height: 100%;
   display: flex;
+  flex-direction: column;
   background-color: #181C2e;
   overflow: auto;
 `;
 
 export const BoxTopStyled = styled.div`
   width: 100%;
-  height: 250px;
+  height: 200px;
   background-color: red;
   
 `;
 
 export const BoxEndStyled = styled.div`
-  width: 600px;
-  height: 50px;
+  width: 100%;
+  height: 400px;
   display: flex;
-  justify-content: end;
   align-items: center;
+  background-color: aqua;
 `;
