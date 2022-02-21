@@ -11,7 +11,7 @@ export const Container = styled.div`
 `;
 
 export const Box = styled.div`
-  width: 150px;
+  width: 250px;
   height: 20px;
   display: flex;
   align-items: center;
@@ -19,6 +19,6 @@ export const Box = styled.div`
 `;
 
 export const LabelStyle = styled.div`
-  width: 100px;
+  width: 200px;
   font-size: 18px;  
 `;
