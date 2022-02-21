@@ -42,8 +42,8 @@ export default function TabNavigator({
               <path d="M16.25 32.5V22.75H22.75V32.5H30.875V19.5H35.75L19.5 4.875L3.25 19.5H8.125V32.5H16.25Z" fill="white" />
             </svg>
           )}
-          label="Chamados"
-          onClick={() => handleButtonClick('calls')}
+          label="Início"
+          onClick={() => handleButtonClick('')}
           isActive={screen === ''}
 
         />

@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 // pages
 import {
-  Dashboard, Profile, Calls, Settings,
+  Dashboard, Profile, Settings,
 } from '..';
 // components
 import { TabNavigator } from '../../components';
@@ -42,10 +42,6 @@ export default function Main() {
          */
         handleTitleDom('Cliente');
         break;
-      case '/calls':
-        setLocation('resultado');
-        handleTitleDom('Chamados');
-        break;
       case '/settings':
         setLocation('settings');
         handleTitleDom('Configurações');
@@ -79,11 +75,6 @@ export default function Main() {
             exact
             path="/"
             component={Dashboard}
-          />
-          <Route
-            exact
-            path="/calls"
-            component={Calls}
           />
           <Route
             exact

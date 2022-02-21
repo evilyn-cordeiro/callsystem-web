@@ -13,8 +13,4 @@ export const Aside = styled.div`
 export const Content = styled.div`
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top:50px;
-  padding-bottom: 25px;
 `;
