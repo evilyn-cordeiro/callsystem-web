@@ -4,7 +4,7 @@
 + styled-components@5.3.3
 + axios@0.25.0
 + jwt-decode@3.1.2
-+ "http-proxy-middleware@2.0.3
++ "http-proxy-middleware@2.0.2
 
 ## devDependencies
 + eslint@8.9.0
